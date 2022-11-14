@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assignment 2: Thalindu</title>
+    <style>
+      
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: lato;
+      }
+      #box {
+        width: 100%;
+        height: 100vh;
+        scroll-behavior: smooth;
+        overflow-y: scroll;
+      }
+      #box div {
+        position: relative;
+        height: 100%;
+      }
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 0 40px;
+        align-items: center;
+        justify-content: center;
+      }
+      .content h1 {
+        font-size: 70px;
+        font-weight: bold;
+        color: #262626;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+      }
+      #about .content h1,
+      #portfolio .content h1,
+      #services .content h1,
+      #contact .content h1 {
+        color: #5b5b5b;
+      }
+      .content p {
+        line-height: 1.5;
+        margin: auto;
+        color: #000;
+      }
+      ul {
+        padding: 0;
+        text-align: center;
+        position: fixed;
+        margin: 2% auto;
+        z-index: 1;
+        width: 1100px;
+        left: 0;
+        right: 0;
+        font-family: lato;
+      }
+      ul li {
+        list-style: none;
+        display: inline-block;
+      }
+
+      ul li a {
+        display: block;
+        text-decoration: none;
+        height: 45px;
+        font-size: 20px;
+        background: #fff;
+        width: 200px;
+        color: #262626;
+        margin: 4px 0;
+        text-transform: uppercase;
+        line-height: 45px;
+        -webkit-mask-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 1),
+          rgba(0, 0, 0, 0.5)
+        );
+      }
+      ul li a:hover {
+        background: deeppink;
+        text-decoration: none;
+        color: #fff;
+      }
+      #home {
+        background-image: url("https://www.japan-guide.com/thumb/XYZeXYZe2158_1680b.jpg");
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+      }
+      #home .content h1 {
+        font-size: 70px;
+        font-weight: bold;
+        color: rgb(206, 13, 13);
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        border-bottom: 5px solid red;
+        border-bottom-color: coral;
+        border-bottom-style: dotted;
+        background-image: linear-gradient(
+          to right,
+          rgb(235, 168, 168),
+          rgb(207, 178, 178)
+        );
+        width: 150%;
+        -webkit-mask-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 1),
+          rgba(0, 0, 0, 0.5)
+        );
+      }
+      #home .content h2 {
+        font-weight: bold;
+        color: rgb(206, 13, 13);
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        border-bottom: 5px solid red;
+        border-bottom-color: coral;
+        border-bottom-style: dotted;
+        background-image: linear-gradient(
+          to right,
+          rgb(235, 168, 168),
+          rgb(207, 178, 178)
+        );
+        width: 150%;
+        background-repeat: no-repeat;
+        -webkit-mask-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 1),
+          rgba(0, 0, 0, 0.5)
+        );
+      }
+      #portfolio,
+      #contact {
+        background: #f3f3f3;
+      }
+      #about .content img.one{
+        position: absolute;
+        z-index: -9;
+        top: -40%;
+        left: -30%;
+      }
+      #about {
+        text-align: 20%;
+        visibility: visible;
+      }
+      #about .content img.two{
+        position: absolute;
+        z-index: -9;
+        top: 80%;
+        left: 96%;
+      }
+      @media print {
+        footer {
+          page-break-after: always;
+        }
+      }
+      @media print {
+        h1 {
+          page-break-before: always;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">about</a>
+        </li>
+        <li>
+          <a href="#contact"><i class="fa fa-envelope">  contact</i></a>
+        </li>
+      </ul>
+      <div id="home">
+        <section class="content">
+          <h1>Kyoto</h1>
+          <h2>Tourism</h2>
+        </section>
+      </div>
+      <div id="about">
+        <section class="content">
+          <h1>About</h1>
+          <p>
+            Kyoto (京都, Kyōto) served as Japan's capital and the emperor's
+            residence from 794 until 1868. It is one of the country's ten
+            largest cities with a population of 1.5 million people and a modern
+            face. Over the centuries, Kyoto was destroyed by many wars and
+            fires, but due to its exceptional historic value, the city was
+            dropped from the list of target cities for the atomic bomb and
+            escaped destruction during World War II. Countless temples, shrines
+            and other historically priceless structures survive in the city
+            today.
+          </p>
+          <img class="one" src="https://www.japan-guide.com/g18/3918_top.jpg" width="400px" height="200px" />
+          <img class="two" src="https://www.japan-guide.com/g19/740/3918_11.jpg" width="400px" height="200px" />
+        </section>
+      </div>
+      <div id="contact">
+        <section class="content">
+          <h1>Contact</h1>
+          
+          <p>
+            Thalindu Lakshan
+          </p>
+          <svg viewBox="0 0 30 5" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="5" x2="30" y2="5" stroke="black" stroke-dasharray="4 1" stroke-dashoffset="1" stroke-width="1" />
+          </svg>
+        </section>
+      </div>
+      
+    </div>
+  </body>
+</html>
